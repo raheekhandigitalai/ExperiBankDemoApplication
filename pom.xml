@@ -23,31 +23,31 @@
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>6.1.0</version>
+            <version>7.3.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.0.0</version>
+            <version>7.4.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
-            <version>3.12.0</version>
+            <version>3.141.59</version>
         </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.12.0</version>
+            <version>3.141.59</version>
         </dependency>
 
         <dependency>
             <groupId>com.experitest</groupId>
             <artifactId>reporter-testng</artifactId>
-            <version>22.3</version>
+            <version>22.6</version>
         </dependency>
 
     </dependencies>
