@@ -22,8 +22,8 @@ public class BaseClass {
     protected ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
     protected WebDriverWait wait;
 
-    private String ACCESS_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODQxOTkxLCJ4cC5wIjozNjUyNjQ4LCJ4cC5tIjoxNTk5MDUxNzkyNTE5LCJleHAiOjE5NzM3NzAyNzksImlzcyI6ImNvbS5leHBlcml0ZXN0In0.UtsBhI3SI4IqrSPqFPtOSDNm_MjUvsRBvyI2c-ukNAY";
-    private String CLOUD_URL = "https://uscloud.experitest.com/wd/hub";
+//     private String ACCESS_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODQxOTkxLCJ4cC5wIjozNjUyNjQ4LCJ4cC5tIjoxNTk5MDUxNzkyNTE5LCJleHAiOjE5NzM3NzAyNzksImlzcyI6ImNvbS5leHBlcml0ZXN0In0.UtsBhI3SI4IqrSPqFPtOSDNm_MjUvsRBvyI2c-ukNAY";
+//     private String CLOUD_URL = "https://uscloud.experitest.com/wd/hub";
 
     public AppiumDriver getDriver() {
         return driver.get();
@@ -33,7 +33,7 @@ public class BaseClass {
     @Parameters({"platform"})
     public void setUp(String platform, @Optional Method method) throws MalformedURLException {
 
-        desiredCapabilities.setCapability("accessKey", ACCESS_KEY);
+        desiredCapabilities.setCapability("accessKey", System.getenv("ACCESS_KEY"));
         desiredCapabilities.setCapability("Jenkins_Build_Number", System.getenv("BUILD_NUMBER"));
         desiredCapabilities.setCapability("testName", method.getName() + " - " + platform);
 
@@ -44,7 +44,7 @@ public class BaseClass {
             desiredCapabilities.setCapability("autoAcceptAlerts", true);
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
             desiredCapabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
-            driver.set(new IOSDriver(new URL(CLOUD_URL), desiredCapabilities));
+            driver.set(new IOSDriver(new URL(System.getenv("CLOUD_URL")), desiredCapabilities));
 
         } else if (platform.equalsIgnoreCase("Android")) {
 
@@ -53,7 +53,7 @@ public class BaseClass {
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-            driver.set(new AndroidDriver(new URL(CLOUD_URL), desiredCapabilities));
+            driver.set(new AndroidDriver(new URL(System.getenv("CLOUD_URL")), desiredCapabilities));
 
         }
 
