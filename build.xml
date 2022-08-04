@@ -94,7 +94,7 @@
     
      <test name="11">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -103,7 +103,7 @@
 
     <test name="12">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -112,7 +112,7 @@
 
     <test name="13">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -121,7 +121,7 @@
     
     <test name="14">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -130,7 +130,7 @@
     
     <test name="15">
 
-       <parameter name="platform" value="iOS"/>
+       <parameter name="platform" value="Android"/>
 
        <classes>
            <class name="tests.TestClass"/>
@@ -139,7 +139,7 @@
     
     <test name="16">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -148,7 +148,7 @@
 
     <test name="17">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -157,7 +157,7 @@
 
     <test name="18">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -166,7 +166,7 @@
     
     <test name="19">
 
-        <parameter name="platform" value="iOS"/>
+        <parameter name="platform" value="Android"/>
 
         <classes>
             <class name="tests.TestClass"/>
@@ -175,7 +175,7 @@
     
     <test name="20">
 
-       <parameter name="platform" value="iOS"/>
+       <parameter name="platform" value="Android"/>
 
        <classes>
            <class name="tests.TestClass"/>
