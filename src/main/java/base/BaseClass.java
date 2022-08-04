@@ -41,6 +41,7 @@ public class BaseClass {
 
             desiredCapabilities.setCapability("deviceQuery", "@os='ios'");
 //            desiredCapabilities.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
+            desiredCapabilities.setCapability("autoAcceptAlerts", true);
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
             desiredCapabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
             driver.set(new IOSDriver(new URL(CLOUD_URL), desiredCapabilities));
