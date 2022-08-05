@@ -44,7 +44,7 @@ public class BaseClass {
             desiredCapabilities.setCapability("autoAcceptAlerts", true);
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
             desiredCapabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
-            driver.set(new IOSDriver(new URL(System.getenv("CLOUD_URL")), desiredCapabilities));
+            driver.set(new IOSDriver(new URL(System.getenv("CLOUD_URL" + "/wd/hub")), desiredCapabilities));
 
         } else if (platform.equalsIgnoreCase("Android")) {
 
@@ -53,7 +53,7 @@ public class BaseClass {
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-            driver.set(new AndroidDriver(new URL(System.getenv("CLOUD_URL")), desiredCapabilities));
+            driver.set(new AndroidDriver(new URL(System.getenv("CLOUD_URL" + "/wd/hub")), desiredCapabilities));
 
         }
 
