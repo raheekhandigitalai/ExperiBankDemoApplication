@@ -22,9 +22,6 @@ public class BaseClass {
     protected ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
     protected WebDriverWait wait;
 
-//     private String ACCESS_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODQxOTkxLCJ4cC5wIjozNjUyNjQ4LCJ4cC5tIjoxNTk5MDUxNzkyNTE5LCJleHAiOjE5NzM3NzAyNzksImlzcyI6ImNvbS5leHBlcml0ZXN0In0.UtsBhI3SI4IqrSPqFPtOSDNm_MjUvsRBvyI2c-ukNAY";
-//     private String CLOUD_URL = "https://uscloud.experitest.com/wd/hub";
-
     public AppiumDriver getDriver() {
         return driver.get();
     }
