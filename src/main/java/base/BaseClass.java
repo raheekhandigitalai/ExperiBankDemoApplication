@@ -36,7 +36,7 @@ public class BaseClass {
 
         if (platform.equalsIgnoreCase("iOS")) {
 
-            desiredCapabilities.setCapability("deviceQuery", "@os='ios'");
+            desiredCapabilities.setCapability("deviceQuery", "@os='ios' and contains(@name, 'XS')");
 //            desiredCapabilities.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
             desiredCapabilities.setCapability("autoAcceptAlerts", true);
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
@@ -45,7 +45,7 @@ public class BaseClass {
 
         } else if (platform.equalsIgnoreCase("Android")) {
 
-            desiredCapabilities.setCapability("deviceQuery", "@os='android'");
+            desiredCapabilities.setCapability("deviceQuery", "@os='android' and contains(@name, 'S20')");
 //            desiredCapabilities.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
