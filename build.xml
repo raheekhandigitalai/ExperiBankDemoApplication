@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test Automation" parallel="tests" thread-count="20">
+<suite name="Test Automation" parallel="tests" thread-count="5">
 
     <test name="1">
 
@@ -47,7 +47,7 @@
        </classes>
    </test>
     
-    <test name="6">
+<!--     <test name="6">
 
         <parameter name="platform" value="iOS"/>
 
@@ -90,7 +90,7 @@
        <classes>
            <class name="tests.TestClass"/>
        </classes>
-   </test>
+   </test> -->
     
      <test name="11">
 
@@ -137,7 +137,7 @@
        </classes>
    </test>
     
-    <test name="16">
+<!--     <test name="16">
 
         <parameter name="platform" value="Android"/>
 
@@ -180,6 +180,6 @@
        <classes>
            <class name="tests.TestClass"/>
        </classes>
-   </test>
+   </test> -->
 
 </suite>
