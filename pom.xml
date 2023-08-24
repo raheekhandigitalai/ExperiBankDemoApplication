@@ -8,22 +8,12 @@
     <artifactId>ExperiBankDemoApplication</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>Experitest.repo1</id>
-            <name>YourName</name>
-            <url>https://uscloud.experitest.com/repo/</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-
-
     <dependencies>
 
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>7.3.0</version>
+            <version>8.3.0</version>
         </dependency>
 
         <dependency>
@@ -41,13 +31,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.experitest</groupId>
-            <artifactId>reporter-testng</artifactId>
-            <version>22.6</version>
+            <version>4.10.0</version>
         </dependency>
 
     </dependencies>
