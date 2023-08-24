@@ -31,6 +31,7 @@ public class BaseClass {
     @BeforeMethod
     @Parameters({"platform"})
     public void setUp(String platform, @Optional Method method) throws MalformedURLException {
+        DesiredCapabilities caps = new DesiredCapabilities();
 
         desiredCapabilities.setCapability("accessKey", System.getenv("ACCESS_KEY"));
         desiredCapabilities.setCapability("Jenkins_Build_Number", System.getenv("BUILD_NUMBER"));
@@ -38,23 +39,27 @@ public class BaseClass {
 
         if (platform.equalsIgnoreCase("iOS")) {
 
-            desiredCapabilities.setCapability("deviceQuery", "@os='ios' and @category='PHONE'");
-//            desiredCapabilities.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
-            desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
-            desiredCapabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
-            desiredCapabilities.setCapability("autoAcceptAlerts", true);
+            caps.setCapability("automationName", "XCUITest");
+            caps.setCapability("deviceQuery", "@os='ios' and @category='PHONE'");
+//            caps.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
+            caps.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+            caps.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
+            caps.setCapability("autoAcceptAlerts", true);
 
             desiredCapabilities.set(caps);
-            driver.set(new IOSDriver(new URL(System.getenv("CLOUD_URL") + "/wd/hub"), desiredCapabilities));
+            driver.set(new IOSDriver(new URL(System.getenv("CLOUD_URL") + "/wd/hub"), caps));
 
         } else if (platform.equalsIgnoreCase("Android")) {
 
-            desiredCapabilities.setCapability("deviceQuery", "@os='android' and @category='PHONE'");
+            caps.setCapability("automationName", "UIAutomator2");
+            caps.setCapability("deviceQuery", "@os='android' and @category='PHONE'");
 //            desiredCapabilities.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
-            desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
-            desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
-            desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-            driver.set(new AndroidDriver(new URL(System.getenv("CLOUD_URL") + "/wd/hub"), desiredCapabilities));
+            caps.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
+            caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
+            caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
+
+            desiredCapabilities.set(caps);
+            driver.set(new AndroidDriver(new URL(System.getenv("CLOUD_URL") + "/wd/hub"), caps));
 
         }
 
