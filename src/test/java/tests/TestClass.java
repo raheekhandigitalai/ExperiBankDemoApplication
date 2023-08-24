@@ -4,6 +4,7 @@ import base.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
+import java.net.MalformedURLException;
 
 import static org.testng.Assert.assertTrue;
 
