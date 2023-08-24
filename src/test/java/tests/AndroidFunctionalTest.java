@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 
 import static org.testng.Assert.assertTrue;
 
-public class TestClass extends BaseClass {
+public class AndroidFunctionalTest extends BaseClass {
 
     @Test
     public void makePaymentTest() throws InterruptedException {
