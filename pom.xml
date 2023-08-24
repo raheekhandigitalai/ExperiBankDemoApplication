@@ -30,14 +30,14 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
-            <version>3.141.59</version>
+            <version>4.10.0</version>
         </dependency>
 
-        <dependency>
+<!--         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.10.0</version>
-        </dependency>
+        </dependency> -->
 
     </dependencies>
 
