@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Automation" parallel="tests" thread-count="1">
 
-    <test name="1">
+<!--     <test name="1">
 
         <parameter name="platform" value="iOS"/>
 
         <classes>
             <class name="tests.TestClass"/>
         </classes>
-    </test>
+    </test> -->
 
 <!--     <test name="2">
 
@@ -97,11 +97,11 @@
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
 
-    <test name="12">
+<!--     <test name="12">
 
         <parameter name="platform" value="Android"/>
 
@@ -135,7 +135,7 @@
        <classes>
            <class name="tests.TestClass"/>
        </classes>
-   </test>
+   </test> -->
     
 <!--     <test name="16">
 
