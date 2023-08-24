@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test Automation" parallel="tests" thread-count="40">
+<suite name="Test Automation" parallel="tests" thread-count="20">
 
     <test name="1">
 
