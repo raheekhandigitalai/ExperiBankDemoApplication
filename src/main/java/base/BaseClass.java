@@ -13,6 +13,7 @@ import org.testng.annotations.*;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class BaseClass {
 
@@ -63,7 +64,7 @@ public class BaseClass {
 
         }
 
-        wait.set(new WebDriverWait(getDriver(), 10));
+        wait.set(new WebDriverWait(getDriver(), Duration.ofSeconds(10)));
     }
 
     @AfterMethod(alwaysRun = true)
