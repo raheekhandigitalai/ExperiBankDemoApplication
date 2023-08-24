@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test Automation" parallel="tests" thread-count="1">
+<suite name="Test Automation" parallel="tests" thread-count="20">
 
-<!--     <test name="1">
+    <test name="1">
 
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
-    </test> -->
+    </test>
 
-<!--     <test name="2">
+    <test name="2">
 
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
     </test>
 
@@ -25,7 +25,7 @@
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
     </test>
     
@@ -34,7 +34,7 @@
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
     </test>
     
@@ -43,16 +43,16 @@
        <parameter name="platform" value="iOS"/>
 
        <classes>
-           <class name="tests.TestClass"/>
+           <class name="tests.IOSFunctionalTest"/>
        </classes>
-   </test> -->
+   </test>
     
-<!--     <test name="6">
+   <test name="6">
 
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
     </test>
 
@@ -61,7 +61,7 @@
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
     </test>
 
@@ -70,7 +70,7 @@
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
     </test>
     
@@ -79,7 +79,7 @@
         <parameter name="platform" value="iOS"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.IOSFunctionalTest"/>
         </classes>
     </test>
     
@@ -88,9 +88,9 @@
        <parameter name="platform" value="iOS"/>
 
        <classes>
-           <class name="tests.TestClass"/>
+           <class name="tests.IOSFunctionalTest"/>
        </classes>
-   </test> -->
+   </test>
     
      <test name="11">
 
@@ -101,12 +101,12 @@
         </classes>
     </test>
 
-<!--     <test name="12">
+    <test name="12">
 
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
 
@@ -115,7 +115,7 @@
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
     
@@ -124,7 +124,7 @@
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
     
@@ -133,16 +133,16 @@
        <parameter name="platform" value="Android"/>
 
        <classes>
-           <class name="tests.TestClass"/>
+           <class name="tests.AndroidFunctionalTest"/>
        </classes>
-   </test> -->
+   </test>
     
-<!--     <test name="16">
+   <test name="16">
 
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
 
@@ -151,7 +151,7 @@
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
 
@@ -160,7 +160,7 @@
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
     
@@ -169,7 +169,7 @@
         <parameter name="platform" value="Android"/>
 
         <classes>
-            <class name="tests.TestClass"/>
+            <class name="tests.AndroidFunctionalTest"/>
         </classes>
     </test>
     
@@ -178,8 +178,8 @@
        <parameter name="platform" value="Android"/>
 
        <classes>
-           <class name="tests.TestClass"/>
+           <class name="tests.AndroidFunctionalTest"/>
        </classes>
-   </test> -->
+   </test>
 
 </suite>
