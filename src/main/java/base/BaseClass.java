@@ -36,7 +36,7 @@ public class BaseClass {
 
         caps.setCapability("accessKey", System.getenv("ACCESS_KEY"));
         caps.setCapability("Jenkins_Build_Number", System.getenv("BUILD_NUMBER"));
-        caps.setCapability("testName", method.getName() + " - " + platform);
+        caps.setCapability("testName", method.getName());
 
         if (platform.equalsIgnoreCase("iOS")) {
 
