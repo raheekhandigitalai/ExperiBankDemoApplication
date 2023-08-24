@@ -10,26 +10,26 @@ import static org.testng.Assert.assertTrue;
 public class TestClass extends BaseClass {
 
     @Test
-    public void makePaymentTest() {
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("usernameTextField")));
-        getDriver().findElement(By.id("usernameTextField")).sendKeys("company");
-        getDriver().findElement(By.id("passwordTextField")).sendKeys("company");
-        getDriver().findElement(By.id("loginButton")).click();
-        Boolean isLogoutButtonPresent = getDriver().findElement(By.id("logoutButton")).isDisplayed();
+    public void makePaymentTest() throws InterruptedException {
+        wait.until(ExpectedConditions.elementToBeClickable(By.name("usernameTextField")));
+        getDriver().findElement(By.name("usernameTextField")).sendKeys("company");
+        getDriver().findElement(By.name("passwordTextField")).sendKeys("company");
+        getDriver().findElement(By.name("loginButton")).click();
+
+        Thread.sleep(3000);
+        
+        Boolean isLogoutButtonPresent = getDriver().findElement(By.name("logoutButton")).isDisplayed();
         assertTrue(isLogoutButtonPresent);
 
-        getDriver().findElement(By.id("makePaymentButton")).click();
+        getDriver().findElement(By.name("makePaymentButton")).click();
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(By.name("cancelButton")));
+        getDriver().findElement(By.name("cancelButton")).click();
+        getDriver().findElement(By.name("logoutButton")).click();
 
-        getDriver().findElement(By.id("cancelButton")).click();
-        getDriver().findElement(By.id("logoutButton")).click();
+        Thread.sleep(2000);
 
-        Boolean isLoginButtonPresent = getDriver().findElement(By.id("loginButton")).isDisplayed();
+        Boolean isLoginButtonPresent = getDriver().findElement(By.name("loginButton")).isDisplayed();
         assertTrue(isLoginButtonPresent);
     }
 
