@@ -34,9 +34,9 @@ public class BaseClass {
     public void setUp(String platform, @Optional Method method) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
 
-        desiredCapabilities.setCapability("accessKey", System.getenv("ACCESS_KEY"));
-        desiredCapabilities.setCapability("Jenkins_Build_Number", System.getenv("BUILD_NUMBER"));
-        desiredCapabilities.setCapability("testName", method.getName() + " - " + platform);
+        caps.setCapability("accessKey", System.getenv("ACCESS_KEY"));
+        caps.setCapability("Jenkins_Build_Number", System.getenv("BUILD_NUMBER"));
+        caps.setCapability("testName", method.getName() + " - " + platform);
 
         if (platform.equalsIgnoreCase("iOS")) {
 
