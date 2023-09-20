@@ -52,7 +52,7 @@ public class BaseClass {
 
         } else if (platform.equalsIgnoreCase("Android")) {
 
-            caps.setCapability("orientation", "LANDSCAPE");
+            caps.setCapability("orientation", "landscape");
             caps.setCapability("automationName", "UIAutomator2");
             caps.setCapability("deviceQuery", "@os='android' and @category='PHONE' and contains(@name, 'Galaxy')");
 //            desiredCapabilities.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
