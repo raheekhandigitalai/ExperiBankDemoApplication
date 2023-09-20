@@ -3,6 +3,7 @@ package tests;
 
 import base.BaseClass;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import java.net.MalformedURLException;
@@ -13,6 +14,7 @@ public class AndroidFunctionalTest extends BaseClass {
 
     @Test
     public void makePaymentTest() throws InterruptedException {
+        getDriver().rotate(ScreenOrientation.PORTRAIT);
         getWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@resource-id='com.experitest.ExperiBank:id/usernameTextField']")));
         getDriver().findElement(By.xpath("//*[@resource-id='com.experitest.ExperiBank:id/usernameTextField']")).sendKeys("company");
         getDriver().findElement(By.xpath("//*[@resource-id='com.experitest.ExperiBank:id/passwordTextField']")).sendKeys("company");
