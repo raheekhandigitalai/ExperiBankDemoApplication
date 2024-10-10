@@ -56,7 +56,8 @@ public class BaseClass {
             caps.setCapability("automationName", "UiAutomator2");
             caps.setCapability("deviceQuery", "@os='android' and @category='PHONE' and contains(@name, 'Galaxy')");
 //            desiredCapabilities.setCapability("deviceQuery", "@serialnumber='\"" + udid + "\"'");
-            caps.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
+            // caps.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
+            caps.setCapability(MobileCapabilityType.APP, "cloud:uniqueName=SeeTestDemoApp");
             caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
             caps.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
 
